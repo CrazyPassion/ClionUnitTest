@@ -28,4 +28,5 @@ public:
 
     int fooAdd(int i, int j);
 
+    void AddFoo();
 };

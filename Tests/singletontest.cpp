@@ -22,7 +22,6 @@ namespace {
         }
         virtual void SetUp()
         {
-
         }
 
         virtual void TearDown()
@@ -35,14 +34,21 @@ namespace {
     TEST_F(singleton_test,test_eq)
     {
         Singleton &s = Singleton::GetInstance(&foo);
-        ON_CALL(foo, add1(_,_)).WillByDefault(Return(1));
+        ON_CALL(foo, add1(_,_)).WillByDefault(Return(100));
         EXPECT_EQ(100, s.fooAdd(1,2));
     }
 
     TEST_F(singleton_test,test_eq1)
     {
         Singleton &s = Singleton::GetInstance(&foo);
-        EXPECT_EQ(100, s.getM_state());
+        EXPECT_EQ(0, s.getM_state());
+        s.setM_state(EStatelast);
+    }
+
+    TEST_F(singleton_test,test_eq2)
+    {
+        Singleton &s = Singleton::GetInstance(&foo);
+        EXPECT_EQ(0, s.getM_state());
     }
 
 }

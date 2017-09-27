@@ -25,13 +25,13 @@ void Singleton::setM_state(EState state) {
 }
 
 int Singleton::fooAdd(int i, int j) {
+    AddFoo();
+    return m_foo->add1(i,j);
+}
+
+void Singleton::AddFoo() {
     if (nullptr == m_foo)
     {
         m_foo = new Foo();
-        return m_foo->add1(i, j);
-    } else
-    {
-        return 10;
     }
-//    return m_foo->add1(i,j);
 }
