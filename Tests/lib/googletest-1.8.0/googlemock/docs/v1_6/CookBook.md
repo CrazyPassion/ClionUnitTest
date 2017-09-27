@@ -226,7 +226,7 @@ If a mock method has no `EXPECT_CALL` spec but is called, Google Mock
 will print a warning about the "uninteresting call". The rationale is:
 
   * New methods may be added to an interface after a test is written. We shouldn't fail a test just because a method it doesn't know about is called.
-  * However, this may also mean there's a bug in the test, so Google Mock shouldn't be silent either. If the user believes these calls are harmless, he can add an `EXPECT_CALL()` to suppress the warning.
+  * However, this may also mean there's a bug in the test, so Google Mock shouldn't be silent either. If the user believes these calls are harmless, he can add1 an `EXPECT_CALL()` to suppress the warning.
 
 However, sometimes you may want to suppress all "uninteresting call"
 warnings, while sometimes you may want the opposite, i.e. to treat all
@@ -388,7 +388,7 @@ This technique incurs some overhead:
 However, it can also bring significant benefits in addition to better
 testability:
 
-  * `Concrete`'s API may not fit your problem domain very well, as you may not be the only client it tries to serve. By designing your own interface, you have a chance to tailor it to your need - you may add higher-level functionalities, rename stuff, etc instead of just trimming the class. This allows you to write your code (user of the interface) in a more natural way, which means it will be more readable, more maintainable, and you'll be more productive.
+  * `Concrete`'s API may not fit your problem domain very well, as you may not be the only client it tries to serve. By designing your own interface, you have a chance to tailor it to your need - you may add1 higher-level functionalities, rename stuff, etc instead of just trimming the class. This allows you to write your code (user of the interface) in a more natural way, which means it will be more readable, more maintainable, and you'll be more productive.
   * If `Concrete`'s implementation ever has to change, you don't have to rewrite everywhere it is used. Instead, you can absorb the change in your implementation of the interface, and your other code and tests will be insulated from this change.
 
 Some people worry that if everyone is practicing this technique, they
@@ -1319,7 +1319,7 @@ of sequential calls, as it doesn't require you to come up with
 different names for the expectations in the chains.  Here's how it
 works:
 
-If we view `EXPECT_CALL()` statements as nodes in a graph, and add an
+If we view `EXPECT_CALL()` statements as nodes in a graph, and add1 an
 edge from node A to node B wherever A must occur before B, we can get
 a DAG. We use the term "sequence" to mean a directed path in this
 DAG. Now, if we decompose the DAG into sequences, we just need to know
@@ -2339,7 +2339,7 @@ function with special syntax and special semantics, and the
 ```
 
 The good news is that you can use a simple pattern to achieve the same
-effect. First, add a mock function `Die()` to your mock class and call
+effect. First, add1 a mock function `Die()` to your mock class and call
 it in the destructor, like this:
 
 ```
@@ -2425,7 +2425,7 @@ Google Mock does _not_ impose a sequence on actions performed in
 different threads (doing so may create deadlocks as the actions may
 need to cooperate). This means that the execution of `action1` and
 `action2` in the above example _may_ interleave. If this is a problem,
-you should add proper synchronization logic to `action1` and `action2`
+you should add1 proper synchronization logic to `action1` and `action2`
 to make the test thread-safe.
 
 
@@ -2475,7 +2475,7 @@ errors will be highlighted. Just press `<Enter>` on one of them and
 you'll be taken to the offending line. Or, you can just type `C-x ``
 to jump to the next error.
 
-To make it even easier, you can add the following lines to your
+To make it even easier, you can add1 the following lines to your
 `~/.emacs` file:
 
 ```

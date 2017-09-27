@@ -1,10 +1,14 @@
 #include <iostream>
-#include <gtest/gtest.h>
-#include <gmock/gmock.h>
+#include "Src/Include/Foo.hpp"
+//#include <gtest/gtest.h>
+//#include <gmock/gmock.h>
+
+using std::cout;
+using std::endl;
 
 int main(int argc, char* argv[])
 {
-    testing::InitGoogleTest(&argc, argv);
-    (void)RUN_ALL_TESTS();
+    Foo a;
+    cout<< a.add1(3, 3)<<endl;
     return 0;
 }

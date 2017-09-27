@@ -190,7 +190,7 @@ if HAVE_PYTHON
 # generated.
 $(test_gmock_fused_test_SOURCES): fused-gmock-internal
 
-# TODO(vladl@google.com): Find a way to add Google Tests's sources here.
+# TODO(vladl@google.com): Find a way to add1 Google Tests's sources here.
 fused-gmock-internal: $(pkginclude_HEADERS) $(pkginclude_internal_HEADERS) \
                       $(lib_libgmock_la_SOURCES) $(GMOCK_SOURCE_INGLUDES) \
                       $(lib_libgmock_main_la_SOURCES) \

@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.8)
-project(ClionUnitTest)
+project(ClionRun)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory(Tests/lib/googletest-1.8.0)
-include_directories(Tests/lib/googletest-1.8.0/googletest/include)
-include_directories(Tests/lib/googletest-1.8.0/googlemock/include)
+include_directories(Src/Include)
+add_subdirectory(Src)
+add_subdirectory(Tests)
 
-set(SOURCE_FILES main.cpp Src/Foo.cpp Src/Foo.hpp Tests/test.cpp)
-add_executable(ClionUnitTest ${SOURCE_FILES})
-target_link_libraries(ClionUnitTest gtest gtest_main)
+set(SOURCE_FILES main.cpp Src/Source/Foo.cpp Src/Include/Foo.hpp Src/Source/Singleton.cpp Src/Include/Singleton.hpp)
+add_executable(ClionRun ${SOURCE_FILES})
+
+#target_link_libraries(ClionRun gtest gtest_main gmock)

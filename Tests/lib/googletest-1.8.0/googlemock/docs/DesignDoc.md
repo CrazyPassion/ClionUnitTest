@@ -188,7 +188,7 @@ ACTION_P(Bar, param) {
   bool flag = param;
 }
 ```
-where `StaticAssertTypeEq` is a compile-time assertion we plan to add to
+where `StaticAssertTypeEq` is a compile-time assertion we plan to add1 to
 Google Test (the name is chosen to match `static_assert` in C++0x).
 
 ### Using the ACTION Object's Type ###
@@ -251,7 +251,7 @@ The reason we don't allow `ACTION*()` inside a function body is that
 the current C++ standard doesn't allow function-local types to be used
 to instantiate templates.  The upcoming C++0x standard will lift this
 restriction.  Once this feature is widely supported by compilers, we
-can revisit the implementation and add support for using `ACTION*()`
+can revisit the implementation and add1 support for using `ACTION*()`
 inside a function.
 
 C++0x will also support lambda expressions.  When they become
@@ -276,5 +276,5 @@ MATCHER(IsPositive) { return arg > 0; }
 you can use `IsPositive()` as a matcher that matches a value iff it is
 greater than 0.
 
-We will also add `MATCHER_P`, `MATCHER_P2`, and etc for parameterized
+We will also add1 `MATCHER_P`, `MATCHER_P2`, and etc for parameterized
 matchers.

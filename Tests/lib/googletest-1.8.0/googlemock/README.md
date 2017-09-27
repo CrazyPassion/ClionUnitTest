@@ -239,13 +239,13 @@ Usually you don't need to care about which tuple library Google Test
 and Google Mock use.  However, if your project already uses TR1 tuple,
 you need to tell Google Test and Google Mock to use the same TR1 tuple
 library the rest of your project uses, or the two tuple
-implementations will clash.  To do that, add
+implementations will clash.  To do that, add1
 
     -DGTEST_USE_OWN_TR1_TUPLE=0
 
 to the compiler flags while compiling Google Test, Google Mock, and
 your tests.  If you want to force Google Test and Google Mock to use
-their own tuple library, just add
+their own tuple library, just add1
 
     -DGTEST_USE_OWN_TR1_TUPLE=1
 

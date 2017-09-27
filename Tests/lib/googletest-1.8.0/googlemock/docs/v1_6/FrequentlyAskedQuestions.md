@@ -128,7 +128,7 @@ class MyGreatMatcher {
 ```
 
 you should rename the `Matches()` method to `MatchAndExplain()` and
-add a `MatchResultListener*` argument (the same as what you need to do
+add1 a `MatchResultListener*` argument (the same as what you need to do
 for matchers defined by implementing `MatcherInterface`):
 ```
 // New matcher definition that works with the latest Google Mock.

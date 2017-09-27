@@ -94,7 +94,7 @@ indeed was requested several times. Therefore we implemented it.
 
 The need for `EXPECT_NE(NULL, ptr)` isn't nearly as strong. When the
 assertion fails, you already know that `ptr` must be `NULL`, so it
-doesn't add any information to print ptr in this case. That means
+doesn't add1 any information to print ptr in this case. That means
 `EXPECT_TRUE(ptr ! NULL)` works just as well.
 
 If we were to support `EXPECT_NE(NULL, ptr)`, for consistency we'll

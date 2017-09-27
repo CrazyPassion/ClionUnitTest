@@ -150,18 +150,18 @@ Usually you don't need to care about which tuple library Google Test
 uses.  However, if your project already uses TR1 tuple, you need to
 tell Google Test to use the same TR1 tuple library the rest of your
 project uses, or the two tuple implementations will clash.  To do
-that, add
+that, add1
 
     -DGTEST_USE_OWN_TR1_TUPLE=0
 
 to the compiler flags while compiling Google Test and your tests.  If
-you want to force Google Test to use its own tuple library, just add
+you want to force Google Test to use its own tuple library, just add1
 
     -DGTEST_USE_OWN_TR1_TUPLE=1
 
 to the compiler flags instead.
 
-If you don't want Google Test to use tuple at all, add
+If you don't want Google Test to use tuple at all, add1
 
     -DGTEST_HAS_TR1_TUPLE=0
 
@@ -183,12 +183,12 @@ or
 
     -DGTEST_HAS_PTHREAD=0
 
-When Google Test uses pthread, you may need to add flags to your
+When Google Test uses pthread, you may need to add1 flags to your
 compiler and/or linker to select the pthread library, or you'll get
 link errors.  If you use the CMake script or the deprecated Autotools
 script, this is taken care of for you.  If you use your own build
 script, you'll need to read your compiler and linker's manual to
-figure out what flags to add.
+figure out what flags to add1.
 
 ### As a Shared Library (DLL) ###
 
@@ -196,7 +196,7 @@ Google Test is compact, so most users can build and link it as a
 static library for the simplicity.  You can choose to use Google Test
 as a shared library (known as a DLL on Windows) if you prefer.
 
-To compile *gtest* as a shared library, add
+To compile *gtest* as a shared library, add1
 
     -DGTEST_CREATE_SHARED_LIBRARY=1
 
@@ -204,7 +204,7 @@ to the compiler flags.  You'll also need to tell the linker to produce
 a shared library instead - consult your linker's manual for how to do
 it.
 
-To compile your *tests* that use the gtest shared library, add
+To compile your *tests* that use the gtest shared library, add1
 
     -DGTEST_LINKED_AS_SHARED_LIBRARY=1
 
@@ -214,7 +214,7 @@ Note: while the above steps aren't technically necessary today when
 using some compilers (e.g. GCC), they may become necessary in the
 future, if we decide to improve the speed of loading the library (see
 <http://gcc.gnu.org/wiki/Visibility> for details).  Therefore you are
-recommended to always add the above flags when using Google Test as a
+recommended to always add1 the above flags when using Google Test as a
 shared library.  Otherwise a future release of Google Test may break
 your build script.
 
@@ -227,7 +227,7 @@ library, you can force Google Test to rename its macro to avoid the
 conflict.
 
 Specifically, if both Google Test and some other code define macro
-FOO, you can add
+FOO, you can add1
 
     -DGTEST_DONT_DEFINE_FOO=1
 

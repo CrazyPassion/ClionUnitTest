@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../Src/Foo.hpp"
+#include "../Src/Include/Foo.hpp"
 
 using namespace testing;
 
@@ -16,8 +16,8 @@ namespace {
 }
 
     TEST(FooTest, test1) {
-        int res = f1.add(1, 2);
-        EXPECT_EQ(res, 4);
+        int res = f1.add1(1, 2);
+        EXPECT_EQ(res, 3);
     }
 
     TEST(FooTest, test2) {
